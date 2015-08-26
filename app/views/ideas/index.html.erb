@@ -1,0 +1,20 @@
+<% content_for :title do %>Idea Box 2.0<% end %>
+<div class="large-9 columns">
+    <%= render 'form' %>
+</div>
+<div class="large-9 columns">
+    <table>
+        <caption>Ideas</caption>
+        <thead>
+            <tr>
+                <th width="200">Title</th>
+                <th width="600">Body</th>
+                <th width="150">Quality</th>
+                <th width="70">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="ideaList">
+            <%= render partial: 'idea', collection: @ideas %>
+        </tbody>
+    </table>
+</div>
