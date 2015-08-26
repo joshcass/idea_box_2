@@ -1,6 +1,6 @@
 <tr class="idea" data-id="<%= idea.id  %>">
     <td id="title"><%= idea.title %></td>
     <td id="body"><%= idea.body %></td>
-    <td id="quality"><%= idea.quality %></td>
+    <td><span id="quality"><%= idea.quality %></span><a class="updateQuality" data-vote="up">+</a><a class="updateQuality" data-vote="down">-</a></td>
     <td><a id="deleteIdea">X</a></td>
 </tr>
