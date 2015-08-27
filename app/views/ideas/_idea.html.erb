@@ -1,6 +1,10 @@
 <tr class="idea" data-id="<%= idea.id  %>">
-    <td id="title"><%= idea.title %></td>
-    <td id="body"><%= idea.body %></td>
-    <td><span id="quality"><%= idea.quality %></span><a class="updateQuality" data-vote="up">+</a><a class="updateQuality" data-vote="down">-</a></td>
-    <td><a id="deleteIdea">X</a></td>
+    <td contenteditable='false' id="title"><%= idea.title %></td>
+    <td contenteditable='false' id="body"><%= idea.body %></td>
+    <td>
+        <span id="quality"><%= idea.quality %></span>
+        <a class="updateQuality right" data-vote="up"><i class="fi-arrow-up" style="font-size: 150%; padding-left: 10px"></i></a>
+        <a class="updateQuality right" data-vote="down"><i class="fi-arrow-down" style="font-size: 150%"></i></a>
+    </td>
+    <td class="text-center"><a id="deleteIdea"><i class="fi-trash" style="font-size: 150%"></i></a></td>
 </tr>
