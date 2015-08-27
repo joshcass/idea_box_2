@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
   before_action :get_idea, only: [:destroy, :update]
+
   def index
     @ideas = Idea.all
   end
