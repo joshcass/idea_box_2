@@ -1,5 +1,6 @@
 $(document).ready(function() {
     ideaBox.bindEventListeners();
+    truncateBody.truncate();
 });
 
 var ideaBox = {
@@ -12,6 +13,21 @@ var ideaBox = {
         $('#ideaList').on('click', '#title', editIdea);
         $('#ideaList').on('click', '#body', editIdea);
     }
+};
+
+var truncateBody = {
+    truncate: function(){
+        $('.idea').each(function(_, idea){
+            var $body = $(idea).find('#body');
+            $body.text(cutString($body.text()));
+        });
+    }
+};
+
+function cutString(string){
+    var cut= string.lastIndexOf(' ', 100);
+    if(cut === -1) return string;
+    return string.substring(0, cut) + '...';
 };
 
 function editIdea(event) {
