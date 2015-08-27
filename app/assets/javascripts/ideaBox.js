@@ -25,9 +25,11 @@ var truncateBody = {
 };
 
 function cutString(string){
-    var cut= string.lastIndexOf(' ', 100);
-    if(cut === -1) return string;
-    return string.substring(0, cut) + '...';
+    if(string.length >= 100) {
+        var cut = string.lastIndexOf(' ', 100);
+        string =  string.substring(0, cut) + '...';
+    }
+    return string;
 };
 
 function editIdea(event) {
